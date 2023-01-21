@@ -24,7 +24,7 @@ await client.connect()
 
 //using cors to send a respone to front end
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"https://astonishing-blancmange-b1fd4a.netlify.app/login",
     credentials: true
 }))
 
