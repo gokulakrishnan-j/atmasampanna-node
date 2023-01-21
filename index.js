@@ -23,7 +23,10 @@ await client.connect()
 
 
 //using cors to send a respone to front end
-app.use(cors())
+app.use(cors({
+    origin:"http://localhost:3000",
+    credentials: true
+}))
 
 // using expeess.json to convert a datas to json 
 app.use(express.json())
