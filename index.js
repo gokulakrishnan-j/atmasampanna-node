@@ -12,14 +12,15 @@ import productRouter from './routers/product.route.js'
 //calling express and storing in variable
 const app = express()
 
+//port number
+const PORT = process.env.PORT || 4000
 
 // connecting to database (mongodb)
 const MONGO_URL = process.env.MONGO_URL
 const client = new MongoClient(MONGO_URL)
 await client.connect()
 
-//port number
-const PORT = process.env.PORT || 4000
+
 
 //using cors to send a respone to front end
 app.use(cors())
