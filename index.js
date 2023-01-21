@@ -23,10 +23,7 @@ await client.connect()
 
 
 //using cors to send a respone to front end
-app.use(cors({
-    origin:"https://astonishing-blancmange-b1fd4a.netlify.app/login",
-    credentials: true
-}))
+app.use(cors())
 
 // using expeess.json to convert a datas to json 
 app.use(express.json())
