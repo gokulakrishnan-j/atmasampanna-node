@@ -1,6 +1,6 @@
 import express from 'express'
 import { auth } from '../index.js'
-import { getingProducts, getingSearchedProducts } from '../service/product.service.js'
+import { getingProducts, getingSearchedProducts ,getingIndividualProduct } from '../service/product.service.js'
 
 // routing 
 const router = express.Router()
@@ -17,6 +17,14 @@ router.get('/:name',auth,async function(request,response){
         const getProducts = await getingSearchedProducts(name)
         response.send(getProducts)
         }) 
+
+router.get('/details/:id',auth,async function(request,response){
+    
+    const {id} = request.params
+    
+            const getProduct = await getingIndividualProduct(id)
+            response.send(getProduct)
+       })  
     
 export default router
 

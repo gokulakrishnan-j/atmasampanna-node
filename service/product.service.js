@@ -1,3 +1,4 @@
+import { ObjectId } from 'mongodb';
 import { client } from '../index.js';
 
 // getting searched products
@@ -16,4 +17,12 @@ export function getingProducts() {
         .collection('products')
         .find({})
         .toArray();
+}
+
+export function getingIndividualProduct(id) {
+    return client
+        .db('atmasampanna')
+        .collection('products')
+        .findOne({_id:ObjectId(id)})
+       
 }
