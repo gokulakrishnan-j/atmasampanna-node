@@ -12,6 +12,8 @@ import productRouter from './routers/product.route.js'
 //calling express and storing in variable
 const app = express()
 
+//port number
+const PORT = process.env.PORT || 4000
 
 //port number
 const PORT = process.env.PORT || 4000
